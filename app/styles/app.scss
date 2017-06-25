@@ -1,0 +1,85 @@
+@import 'ember-paper';
+
+.page-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.checklist-container {
+  color: #FFF;
+  padding: 0px 20px 20px 20px;
+  height: 400%;
+}
+
+.checklist-item {
+  font-size: 1.4em;
+  padding: 5px;
+}
+
+h1.super {
+  color: #FFF;
+  size: 2.0em;
+}
+
+.bg-blue {
+  background-color: color($color-blue, '200');
+}
+.bg-blue md-icon {
+  color: color($color-blue, '900');
+}
+.bg-blue-grey {
+  background-color: color($color-blue-grey, '400');
+}
+.bg-blue-grey-dark {
+  background-color: color($color-blue-grey, '900');
+}
+.bg-green {
+  background-color: color($color-green, '200');
+}
+.bg-green md-icon {
+  color: color($color-green, '900');
+}
+.bg-light-blue {
+  background-color: color($color-light-blue, '50');
+}
+.bg-orange {
+  background-color: color($color-orange, '200');
+}
+.bg-orange md-icon {
+  color: color($color-orange, '900');
+}
+.bg-red {
+  background-color: color($color-red, '200');
+}
+.bg-red md-icon {
+  color: color($color-red, '900');
+}
+
+
+// Hero Banner Styles
+.hero {
+  color: #FFF;
+}
+.hero h1.title {
+  font-size: 2.5em;
+  margin-bottom: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero .tagline {
+  margin-top: 0px;
+}
+
+.hero .tagline {
+  color: color($color-blue, '400');
+  letter-spacing: 0.2em;
+  margin-right: 5px;
+}
+
+.hero .email {
+  color: color($color-red, '400');
+}
