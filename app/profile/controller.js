@@ -4,7 +4,7 @@ export default Controller.extend({
   init() {
     this._super();
 
-    this.set({
+    this.setProperties({
       languages: ['JavaScript (ES6)', 'Python', 'SQL'],
       frameworks: ['EmberJS', 'SailsJS', 'ExpressJS', 'Django', 'AngularJS', 'Flask', 'LeafletJS', 'jQuery'],
       tools: ['ElasticSearch', 'MongoDB', 'MySQL', 'Redis'],
