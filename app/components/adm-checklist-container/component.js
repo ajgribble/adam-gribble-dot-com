@@ -1,6 +1,5 @@
-import Ember from 'ember';
-
-const { computed, Component } = Ember;
+import { computed } from '@ember/object';
+import Component from '@ember/component';
 
 export default Component.extend({
   classNames: ['checklist-container', 'flex-xs-100', 'flex-sm-100', 'flex-gt-sm-25'],
