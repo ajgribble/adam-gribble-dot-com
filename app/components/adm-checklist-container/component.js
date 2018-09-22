@@ -8,6 +8,6 @@ export default Component.extend({
   color: 'grey',
 
   bgColor: computed('color', function() {
-    return `bg-${this.get('color')}`
+    return `bg-${this.color}`;
   })
 });
