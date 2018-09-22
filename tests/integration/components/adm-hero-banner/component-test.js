@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render, find } from '@ember/test-helpers';
+import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | adm hero banner', function(hooks) {
@@ -14,14 +14,5 @@ module('Integration | Component | adm hero banner', function(hooks) {
     await render(hbs`{{adm-hero-banner}}`);
 
     assert.dom('*').hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      {{#adm-hero-banner}}
-        template block text
-      {{/adm-hero-banner}}
-    `);
-
-    assert.dom('*').hasText('template block text');
   });
 });
