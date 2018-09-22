@@ -9,6 +9,6 @@ export default Component.extend({
   email: '',
 
   taglineParts: computed('tagline', function() {
-    return this.get('tagline').split('.').map(item => item ? `${item}. ` : '');
+    return this.tagline.split('.').map(item => item ? `${item}. ` : '');
   })
 });
