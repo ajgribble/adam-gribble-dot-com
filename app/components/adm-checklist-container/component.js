@@ -2,7 +2,7 @@ import { computed } from '@ember/object';
 import Component from '@ember/component';
 
 export default Component.extend({
-  classNames: ['checklist-container', 'flex-xs-100', 'flex-sm-100', 'flex-gt-sm-25'],
+  classNames: ['flex-1', 'text-white'],
   classNameBindings: ['bgColor'],
 
   color: 'grey',

@@ -1,9 +1,9 @@
-<h1 class="title">{{name}}</h1>
+<h1 class="text-5xl text-center text-white uppercase mb-2">{{name}}</h1>
 <div
-  class="layout-xs-column layout-gt-sm-row layout-align-gt-sm-start layout-align-center-center"
+  class="flex sm:flex-col md:flex-row items-stretch content-center justify-center"
 >
   {{#each taglineParts as |item|}}
-    <p class="tagline">{{item}}</p>
+    <p class="text-blue tracking-wide mr-4">{{item}}</p>
   {{/each}}
 </div>
-{{#paper-button href=(concat "mailto:" email) class="email"}}{{email}}{{/paper-button}}
+{{#paper-button href=(concat "mailto:" email) class="bg-red"}}{{email}}{{/paper-button}}

@@ -2,7 +2,8 @@ import { computed } from '@ember/object';
 import Component from '@ember/component';
 
 export default Component.extend({
-  classNames: ['hero', 'layout-column', 'layout-align-gt-sm-center-center', 'layout-align-center'],
+  classNames: ['flex', 'flex-col'],
+  // classNames: ['layout-column', 'layout-align-gt-sm-center-center', 'layout-align-center'],
 
   name: '',
   tagline: '',
