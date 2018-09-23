@@ -15,3 +15,10 @@
  @apply .bg-blue-dark;
 }
 */
+
+.adm-btn {
+  @apply .text-orange .no-underline .text-center .py-2 .px-3 .rounded;
+}
+.adm-btn:hover {
+  @apply .text-white .bg-orange-dark;
+}
