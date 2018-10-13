@@ -4,27 +4,17 @@
       class="flex flex-col justify-center"
     >
       {{adm-hero-banner
-        name="Adam Gribble" 
-        taglineParts=taglineParts
-        email="only-one@adamgribble.com"
+        name=name
+        taglineParts=tagline
+        email=email
       }}
     </div>
   </div>
   <div class="flex sm:flex-col md:flex-row">
-    {{#adm-checklist-container color="blue"}}
-      {{adm-checklist title="Tools/Platforms" textColor="blue" items=tools}}
-    {{/adm-checklist-container}}
-
-    {{#adm-checklist-container color="green"}}
-      {{adm-checklist title="Languages" textColor="green" items=languages}}
-    {{/adm-checklist-container}}
-
-    {{#adm-checklist-container color="orange"}}
-      {{adm-checklist title="Frameworks" textColor="orange" items=frameworks}}
-    {{/adm-checklist-container}}
-
-    {{#adm-checklist-container color="red"}}
-      {{adm-checklist title="Web Design" textColor="red" items=web}}
-    {{/adm-checklist-container}}
+    {{#each skills as |skill|}}
+      {{#adm-checklist-container color=skill.color}}
+        {{adm-checklist title=skill.label textColor=skill.color items=skill.value}}
+      {{/adm-checklist-container}}
+    {{/each}}
   </div>
 </div>
