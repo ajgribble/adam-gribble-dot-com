@@ -11,6 +11,6 @@ export default Component.extend({
     return `bg-${this.color}`;
   }),
   borderColor: computed('color', function() {
-    return `border-${this.color}`
+    return `border-${this.color}`;
   })
 });

@@ -1,11 +1,4 @@
-const {
-  GITHUB_BANNER_COLOR,
-  GITHUB_USERNAME,
-  PROFILE_EMAIL,
-  PROFILE_NAME,
-  PROFILE_SKILLS,
-  TAGLINE
-} = process.env;
+const { GITHUB_BANNER_COLOR, GITHUB_USERNAME, PROFILE_EMAIL, PROFILE_NAME, PROFILE_SKILLS, TAGLINE } = process.env;
 
 module.exports = function(environment) {
   let ENV = {
@@ -63,7 +56,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
   }
 
   return ENV;
