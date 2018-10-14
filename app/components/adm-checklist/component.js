@@ -11,7 +11,7 @@ export default Component.extend({
     return `p-2 font-mono font-light text-sm lg:text-xl text-${this.textColor}-lightest`;
   }),
   contentItemLinkClass: computed('textColor', function() {
-    return `text-color-inherit no-underline hover:underline`;
+    return `text-color-inherit no-underline hover:underline cursor-default`;
   }),
   headerClass: computed('textColor', function() {
     return `mb-2 md:mb-4 lg:mb-8 font-mono font-thin tracking-wide uppercase sm:text-xs lg:text-lg text-${this.textColor}-lightest`;

@@ -1,4 +1,11 @@
-const { PROFILE_EMAIL, PROFILE_NAME, PROFILE_SKILLS, TAGLINE } = process.env;
+const {
+  GITHUB_BANNER_COLOR,
+  GITHUB_USERNAME,
+  PROFILE_EMAIL,
+  PROFILE_NAME,
+  PROFILE_SKILLS,
+  TAGLINE
+} = process.env;
 
 module.exports = function(environment) {
   let ENV = {
@@ -27,6 +34,8 @@ module.exports = function(environment) {
     },
 
     APP: {},
+    githubBannerColor: GITHUB_BANNER_COLOR || '',
+    githubUsername: GITHUB_USERNAME || '',
     profileEmail: PROFILE_EMAIL || '',
     profileName: PROFILE_NAME || '',
     profileSkills: JSON.parse(PROFILE_SKILLS) || [],
