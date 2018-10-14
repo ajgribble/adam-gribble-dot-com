@@ -2,7 +2,7 @@ import { computed } from '@ember/object';
 import Component from '@ember/component';
 
 export default Component.extend({
-  classNames: ['flex-1', 'p-2'],
+  classNames: ['md:flex-1', 'p-4'],
   classNameBindings: ['bgColor', 'borderColor'],
 
   color: 'grey',
