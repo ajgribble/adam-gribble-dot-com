@@ -1,3 +1,5 @@
+const { GITHUB_BANNER_COLOR, GITHUB_USERNAME, PROFILE_EMAIL, PROFILE_NAME, PROFILE_SKILLS, TAGLINE } = process.env;
+
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'adam-gribble-dot-com',
@@ -24,10 +26,13 @@ module.exports = function(environment) {
       'media-src': "'self'"
     },
 
-    APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
-    }
+    APP: {},
+    githubBannerColor: GITHUB_BANNER_COLOR || '',
+    githubUsername: GITHUB_USERNAME || '',
+    profileEmail: PROFILE_EMAIL || '',
+    profileName: PROFILE_NAME || '',
+    profileSkills: JSON.parse(PROFILE_SKILLS) || [],
+    tagline: JSON.parse(TAGLINE) || []
   };
 
   if (environment === 'development') {
@@ -51,7 +56,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
   }
 
   return ENV;

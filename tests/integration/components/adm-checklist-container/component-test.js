@@ -1,25 +1,26 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('adm-checklist-container', 'Integration | Component | adm checklist container', {
-  integration: true
-});
+module('Integration | Component | adm checklist container', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
+  test('it renders', async function(assert) {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+    await render(hbs`{{adm-checklist-container}}`);
 
-  this.render(hbs`{{adm-checklist-container}}`);
+    assert.dom('*').hasText('');
 
-  assert.equal(this.$().text().trim(), '');
+    // Template block usage:
+    await render(hbs`
+      {{#adm-checklist-container}}
+        template block text
+      {{/adm-checklist-container}}
+    `);
 
-  // Template block usage:
-  this.render(hbs`
-    {{#adm-checklist-container}}
-      template block text
-    {{/adm-checklist-container}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+    assert.dom('*').hasText('template block text');
+  });
 });

@@ -1,28 +1,20 @@
-<div class="layout-column page-container">
-  <div class="layout-row flex-70 bg-blue-grey-dark">
-    <div class="layout-column layout-align-center flex-xs-100 flex-sm-80 flex-offset-sm-10 flex-md-60 flex-offset-md-20 flex-lg-60 flex-offset-lg-20 flex-xl-60 flex-offset-xl-20">
-      {{adm-hero-banner
-        name="Adam Gribble" 
-        tagline="Full-Stack Engineer. Avid Traveler. Home Cook."
-        email="only-one@adamgribble.com"
-      }}
-    </div>
-  </div>
-  <div class="layout-xs-column layout-gt-xs-row flex">
-    {{#adm-checklist-container color="blue"}}
-      {{adm-checklist title="Tools/Platforms" items=tools}}
-    {{/adm-checklist-container}}
-
-    {{#adm-checklist-container color="green"}}
-      {{adm-checklist title="Languages" items=languages}}
-    {{/adm-checklist-container}}
-
-    {{#adm-checklist-container color="orange"}}
-      {{adm-checklist title="Frameworks" items=frameworks}}
-    {{/adm-checklist-container}}
-
-    {{#adm-checklist-container color="red"}}
-      {{adm-checklist title="Web Design" items=web}}
-    {{/adm-checklist-container}}
+{{adm-github-ribbon
+  class="absolute pin-r pin-t"
+  color=bannerColor
+  username=username
+}}
+<div class="flex flex-col h-screen">
+  {{adm-hero-banner
+    class="p-4 flex flex-no-shrink flex-1 flex-col justify-center bg-blue-darkest"
+    name=name
+    taglineParts=tagline
+    email=email
+  }}
+  <div class="flex flex-col flex-1 md:flex-initial md:flex-row">
+    {{#each skills as |skill|}}
+      {{#adm-checklist-container color=skill.color}}
+        {{adm-checklist title=skill.label textColor=skill.color items=skill.value}}
+      {{/adm-checklist-container}}
+    {{/each}}
   </div>
 </div>

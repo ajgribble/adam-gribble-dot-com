@@ -2,12 +2,15 @@ import { computed } from '@ember/object';
 import Component from '@ember/component';
 
 export default Component.extend({
-  classNames: ['checklist-container', 'flex-xs-100', 'flex-sm-100', 'flex-gt-sm-25'],
-  classNameBindings: ['bgColor'],
+  classNames: ['md:flex-1', 'p-4'],
+  classNameBindings: ['bgColor', 'borderColor'],
 
   color: 'grey',
 
   bgColor: computed('color', function() {
-    return `bg-${this.get('color')}`
+    return `bg-${this.color}`;
+  }),
+  borderColor: computed('color', function() {
+    return `border-${this.color}`;
   })
 });

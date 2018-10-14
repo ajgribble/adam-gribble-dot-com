@@ -1,7 +1,15 @@
-<h1 class="title">{{name}}</h1>
-<div class="layout-xs-column layout-gt-sm-row layout-align-gt-sm-start layout-align-center-center">
+<h1
+  class="text-2xl md:text-3xl lg:text-4xl text-center text-white uppercase mb-3"
+>
+  {{name}}
+</h1>
+<div
+  class="flex flex-col md:flex-row items-center md:items-stretch content-center justify-center mb-3"
+>
   {{#each taglineParts as |item|}}
-    <p class="tagline">{{item}}</p>
+    <p class="text-sm lg:text-base text-blue tracking-wide mx-1">{{item}}.</p>
   {{/each}}
 </div>
-{{#paper-button href=(concat "mailto:" email) class="email"}}{{email}}{{/paper-button}}
+<div class="text-center">
+  <a href={{concat "mailto:" email}} class="adm-btn">{{email}}</a>
+</div>

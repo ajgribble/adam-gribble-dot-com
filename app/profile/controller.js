@@ -1,14 +1,19 @@
 import Controller from '@ember/controller';
+import ENV from 'adam-gribble-dot-com/config/environment';
+
+const { githubBannerColor, githubUsername, profileEmail, profileName, profileSkills, tagline } = ENV;
 
 export default Controller.extend({
   init() {
     this._super();
 
     this.setProperties({
-      languages: ['JavaScript (ES6)', 'Python', 'SQL'],
-      frameworks: ['EmberJS', 'SailsJS', 'ExpressJS', 'Django', 'AngularJS', 'Flask', 'LeafletJS', 'jQuery'],
-      tools: ['ElasticSearch', 'MongoDB', 'MySQL', 'Redis'],
-      web: ['HTML', 'CSS', 'LESS', 'SASS', 'Material Design', 'Twitter Bootstrap']
+      bannerColor: githubBannerColor,
+      email: profileEmail,
+      name: profileName,
+      skills: profileSkills,
+      tagline,
+      username: githubUsername
     });
   }
 });
