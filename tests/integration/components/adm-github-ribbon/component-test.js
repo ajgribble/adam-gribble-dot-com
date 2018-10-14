@@ -3,24 +3,24 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-module('Integration | Component | adm checklist container', function(hooks) {
+module('Integration | Component | adm-github-ribbon', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.on('myAction', function(val) { ... });
+    // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{adm-checklist-container}}`);
+    await render(hbs`{{adm-github-ribbon}}`);
 
-    assert.dom('*').hasText('');
+    assert.equal(this.element.textContent.trim(), '');
 
     // Template block usage:
     await render(hbs`
-      {{#adm-checklist-container}}
+      {{#adm-github-ribbon}}
         template block text
-      {{/adm-checklist-container}}
+      {{/adm-github-ribbon}}
     `);
 
-    assert.dom('*').hasText('template block text');
+    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

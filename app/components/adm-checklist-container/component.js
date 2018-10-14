@@ -2,7 +2,7 @@ import { computed } from '@ember/object';
 import Component from '@ember/component';
 
 export default Component.extend({
-  classNames: ['flex-1', 'p-2'],
+  classNames: ['md:flex-1', 'p-4'],
   classNameBindings: ['bgColor', 'borderColor'],
 
   color: 'grey',
@@ -11,6 +11,6 @@ export default Component.extend({
     return `bg-${this.color}`;
   }),
   borderColor: computed('color', function() {
-    return `border-${this.color}`
+    return `border-${this.color}`;
   })
 });
