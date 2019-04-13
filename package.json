@@ -1,6 +1,6 @@
 {
   "name": "adam-gribble-dot-com",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Ember App for adamgribble.com",
   "repository": "",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "test": "tests"
   },
   "scripts": {
-    "build": "ember build",
+    "build": "ember build -prod",
     "format": "prettier --print-width 120 --tab-width 2 --single-quote true --trailing-comma none --write \"{app,config,tests}/**/*.js\"",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
