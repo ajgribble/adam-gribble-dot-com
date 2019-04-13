@@ -13,14 +13,5 @@ module('Integration | Component | adm-github-ribbon', function(hooks) {
     await render(hbs`{{adm-github-ribbon}}`);
 
     assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#adm-github-ribbon}}
-        template block text
-      {{/adm-github-ribbon}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });
