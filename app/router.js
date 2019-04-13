@@ -8,6 +8,11 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('profile', { path: '/' });
+
+  this.mount('sample-dashboard', {
+    resetNamespace: true,
+    path: 'sample-dashboard'
+  });
 });
 
 export default Router;
