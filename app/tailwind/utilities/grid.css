@@ -1,0 +1,21 @@
+.grid {
+  display: grid;
+}
+.grid-columns {
+  grid-template-columns: 1fr;
+}
+.grid-rows {
+  grid-template-rows: 1fr auto;
+}
+
+.grid-template-areas-default {
+  grid-template-areas:
+    "main"
+    "footer";
+}
+.grid-area-main {
+  grid-area: main;
+}
+.grid-area-footer {
+  grid-area: footer;
+}

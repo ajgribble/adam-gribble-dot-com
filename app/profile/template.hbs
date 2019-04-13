@@ -3,18 +3,22 @@
   color=bannerColor
   username=username
 }}
-<div class="flex flex-col h-screen">
-  {{adm-hero-banner
-    class="p-4 flex flex-no-shrink flex-1 flex-col justify-center bg-blue-darkest"
-    name=name
-    taglineParts=tagline
-    email=email
-  }}
-  <div class="flex flex-col flex-1 md:flex-initial md:flex-row">
-    {{#each skills as |skill|}}
-      {{#adm-checklist-container color=skill.color}}
-        {{adm-checklist title=skill.label textColor=skill.color items=skill.value}}
-      {{/adm-checklist-container}}
-    {{/each}}
+<div class="grid grid-columns grid-rows grid-template-areas-default h-screen">
+  <div class="grid-area-main">
+    {{adm-hero-banner
+      class="p-4 flex flex-no-shrink flex-1 flex-col justify-center bg-blue-darkest h-full"
+      name=name
+      taglineParts=tagline
+      email=email
+    }}
+  </div>
+  <div class="grid-area-footer">
+    <div class="flex flex-col flex-1 md:flex-initial md:flex-row">
+      {{#each skills as |skill|}}
+        {{#adm-checklist-container color=skill.color}}
+          {{adm-checklist title=skill.label textColor=skill.color items=skill.value}}
+        {{/adm-checklist-container}}
+      {{/each}}
+    </div>
   </div>
 </div>
