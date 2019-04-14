@@ -1,13 +1,18 @@
+/* Generic */
 .grid {
   display: grid;
 }
+.grid-gap-8 {
+  grid-gap: 2em;
+}
+
+/* Homepage */
 .grid-columns {
   grid-template-columns: 1fr;
 }
 .grid-rows {
   grid-template-rows: 1fr auto;
 }
-
 .grid-template-areas-default {
   grid-template-areas:
     "main"
@@ -19,3 +24,22 @@
 .grid-area-footer {
   grid-area: footer;
 }
+
+/* Dashboard */
+.grid-rows-dashboard {
+  grid-template-rows: auto minmax(200px, auto) minmax(400px, 1fr);
+}
+/*
+.grid-template-areas-dashboard {
+  grid-template-areas: "stats" "graphs" "table";
+}
+.grid-area-stats {
+  grid-area: stats;
+}
+.grid-area-graphs {
+  grid-area: graphs;
+}
+.grid-area-table {
+  grid-area: table;
+}
+*/
