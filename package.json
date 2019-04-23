@@ -35,19 +35,20 @@
     "ember-cli-tailwind": "0.7.0",
     "ember-cli-template-lint": "1.0.0-beta.3",
     "ember-cli-uglify": "3.0.0",
-    "ember-cli-update": "0.32.5",
-    "ember-data": "3.9.0",
-    "ember-engines": "^0.7.0",
+    "ember-cli-update": "0.33.2",
+    "ember-data": "3.9.1",
+    "ember-engines": "0.7.0",
+    "ember-fetch": "6.5.1",
     "ember-load-initializers": "2.0.0",
     "ember-maybe-import-regenerator": "0.1.6",
-    "ember-qunit": "^4.4.1",
+    "ember-qunit": "4.4.1",
     "ember-resolver": "5.1.3",
     "ember-source": "3.9.1",
-    "eslint-plugin-ember": "6.3.0",
+    "eslint-plugin-ember": "6.4.1",
     "loader.js": "4.7.0",
     "prettier": "1.17.0",
     "qunit-dom": "0.8.4",
-    "sass": "1.18.0"
+    "sass": "1.19.0"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
@@ -56,5 +57,8 @@
     "paths": [
       "lib/sample-dashboard"
     ]
+  },
+  "dependencies": {
+    "highcharts": "7.1.1"
   }
 }
