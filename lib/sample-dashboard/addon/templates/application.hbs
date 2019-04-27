@@ -27,8 +27,14 @@
       </div>
     </div>
     <div class="grid-area-graphs flex">
-      <div class="adm-card flex-auto mr-4">Graph 1</div>
-      <div class="adm-card flex-auto ml-4">Graph 2</div>
+      <div class="adm-card flex-auto mr-4">
+        <div class="label">Graph 1</div>
+        {{high-charts mode="StockChart" chartOptions=candlestickOptions content=candlestickData}}
+      </div>
+      <div class="adm-card flex-auto ml-4">
+        <div class="label">Graph 2</div>
+        {{high-charts chartOptions=lineOptions content=lineData}}
+      </div>
     </div>
     <div class="grid-area-table flex">
       <div class="adm-card flex-auto">
