@@ -3,26 +3,23 @@
     <div class="grid-area-stats flex">
       <div class="adm-card flex-1 mx-4 -ml-0">
         <div class="adm-stat">
-          <div class="label">Money Spent</div>
-          <div class="value">$623.84</div>
+          {{svg-jar "trending-up" class="icon text-green-dark h-12 w-12"}}
+          <div class="label">30-Day High</div>
+          <div class="value">{{thirtyDayHigh}}</div>
         </div>
       </div>
       <div class="adm-card flex-1 mx-4">
         <div class="adm-stat">
-          <div class="label">Money Saved</div>
-          <div class="value">$89.49</div>
-        </div>
-      </div>
-      <div class="adm-card flex-1 mx-4">
-        <div class="adm-stat">
-          <div class="label">Money Earned</div>
-          <div class="value">$1203.45</div>
+          {{svg-jar "trending-down" class="icon text-red-dark h-12 w-12"}}
+          <div class="label">30-Day Low</div>
+          <div class="value">{{thirtyDayLow}}</div>
         </div>
       </div>
       <div class="adm-card flex-1 mx-4 -mr-0">
         <div class="adm-stat">
-          <div class="label">Money Owed</div>
-          <div class="value">$124.34</div>
+          {{svg-jar "shuffle" class="icon text-blue-dark h-12 w-12"}}
+          <div class="label">30-Day Change</div>
+          <div class="value">{{thirtyDayChange}}</div>
         </div>
       </div>
     </div>
