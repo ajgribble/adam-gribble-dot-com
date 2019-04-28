@@ -1,5 +1,17 @@
 <div class="bg-grey-lighter h-screen overflow-x-auto">
   <div class="grid grid-rows-dashboard grid-gap-8 grid-columns grid-template-areas-dashboard p-8 w-2/3 mx-auto">
+    {{#power-select
+      triggerClass="adm-trigger"
+      options=symbolOptions
+      selected=symbols
+      renderInPlace=true
+      searchEnabled=false
+      selectedItemComponent="adm-symbol-trigger"
+      onchange=(action (mut symbols))
+      as |name|
+    }}
+      {{name}}
+    {{/power-select}}
     <div class="grid-area-stats flex">
       <div class="adm-card flex-1 mx-4 -ml-0">
         <div class="adm-stat">

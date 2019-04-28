@@ -1,0 +1,5 @@
+.adm-trigger {
+  @apply
+    .p-4 !important
+    .text-xl !important;
+}

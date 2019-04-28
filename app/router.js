@@ -11,7 +11,7 @@ Router.map(function() {
 
   this.mount('sample-dashboard', {
     resetNamespace: true,
-    path: 'sample-dashboard'
+    path: 'stock-dashboard'
   });
 });
 

@@ -11,5 +11,6 @@
 
 .adm-stat > .value {
   @apply
-    .font-bold;
+    .font-bold
+    .text-2xl;
 }
