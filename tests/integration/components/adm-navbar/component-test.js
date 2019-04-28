@@ -12,15 +12,13 @@ module('Integration | Component | adm-navbar', function(hooks) {
 
     await render(hbs`{{adm-navbar}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), 'AdamGribble.com');
 
     // Template block usage:
     await render(hbs`
-      {{#adm-navbar}}
-        template block text
-      {{/adm-navbar}}
+      {{#adm-navbar}}{{/adm-navbar}}
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), 'AdamGribble.com');
   });
 });

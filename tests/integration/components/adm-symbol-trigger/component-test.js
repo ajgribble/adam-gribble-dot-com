@@ -12,7 +12,7 @@ module('Integration | Component | adm-symbol-trigger', function(hooks) {
 
     await render(hbs`{{adm-symbol-trigger}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), 'SYMBOL:');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | adm-symbol-trigger', function(hooks) {
       {{/adm-symbol-trigger}}
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), 'SYMBOL:');
   });
 });
