@@ -1,14 +1,15 @@
-.adm-btn {
+.adm-nav-btn {
   @apply
+    .absolute
     .px-3
     .py-2
     .no-underline
     .rounded
     .text-center
+    .text-2xl
     .text-orange;
 }
-.adm-btn:hover {
+.adm-nav-btn:hover {
   @apply
-    .bg-orange-dark
-    .text-white;
+    .underline;
 }

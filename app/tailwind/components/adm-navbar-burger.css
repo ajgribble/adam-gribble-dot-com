@@ -1,0 +1,19 @@
+.adm-navbar-burger-content {
+  @apply
+    .rounded;
+}
+.adm-navbar-burger-content a {
+  @apply
+    .block
+    .p-3;
+}
+.adm-navbar-burger-content a:first-child {
+  @apply
+    .rounded
+    .rounded-b-none;
+}
+.adm-navbar-burger-content a:last-child {
+  @apply
+    .rounded
+    .rounded-t-none;
+}

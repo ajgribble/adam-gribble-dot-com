@@ -1,0 +1,7 @@
+.adm-trigger {
+  @apply
+    .border-0
+    .p-4 !important
+    .shadow-lg
+    .text-xl !important;
+}

@@ -1,0 +1,58 @@
+<div class="bg-grey-lighter h-screen overflow-x-auto">
+  {{adm-navbar linkComponent="link-to-external" homeRoute="home" class="w-2/3 mx-auto"}}
+  <div class="grid grid-rows-dashboard grid-gap-8 grid-columns grid-template-areas-dashboard p-8 w-2/3 mx-auto">
+    {{#power-select
+      triggerClass="adm-trigger"
+      options=symbolOptions
+      selected=symbols
+      renderInPlace=true
+      searchEnabled=false
+      selectedItemComponent=(component "adm-symbol-trigger")
+      onchange=(action (mut symbols))
+      as |name|
+    }}
+      {{name}}
+    {{/power-select}}
+    <div class="grid-area-stats flex">
+      <div class="adm-card flex-1 mx-4 -ml-0">
+        <div class="adm-stat">
+          {{svg-jar "trending-up" class="icon text-green-dark h-12 w-12"}}
+          <div class="label">30-Day High</div>
+          <div class="value">{{thirtyDayHigh}}</div>
+        </div>
+      </div>
+      <div class="adm-card flex-1 mx-4">
+        <div class="adm-stat">
+          {{svg-jar "trending-down" class="icon text-red-dark h-12 w-12"}}
+          <div class="label">30-Day Low</div>
+          <div class="value">{{thirtyDayLow}}</div>
+        </div>
+      </div>
+      <div class="adm-card flex-1 mx-4 -mr-0">
+        <div class="adm-stat">
+          {{svg-jar "shuffle" class="icon text-blue-dark h-12 w-12"}}
+          <div class="label">30-Day Change</div>
+          <div class="value">{{thirtyDayChange}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-area-graphs flex">
+      <div class="adm-card flex-1 mr-4">
+        {{high-charts mode="StockChart" chartOptions=candlestickOptions content=candlestickData}}
+      </div>
+      <div class="adm-card flex-1 ml-4">
+        {{high-charts chartOptions=lineOptions content=lineData}}
+      </div>
+    </div>
+    <div class="grid-area-table flex">
+      <div class="adm-card flex-auto">
+        <h3>News</h3>
+        {{#each model as |stock|}}
+          {{#each stock.news as |item|}}
+            {{adm-news-item class="border-grey-lighter border-0 border-b-2" model=item}}
+          {{/each}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

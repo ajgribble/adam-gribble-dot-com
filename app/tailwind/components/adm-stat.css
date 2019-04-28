@@ -1,0 +1,16 @@
+.adm-stat {
+  @apply
+    .text-center;
+}
+
+.adm-stat > .label {
+  @apply
+    .font-thin
+    .mb-2;
+}
+
+.adm-stat > .value {
+  @apply
+    .font-bold
+    .text-2xl;
+}
