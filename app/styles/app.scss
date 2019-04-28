@@ -1,6 +1,3 @@
 @import 'tailwind';
-
-$ember-power-select-border-color: #2779bd !default;
-$ember-power-select-trigger-border: 3px solid $ember-power-select-border-color !default;
-$ember-power-select-default-focus-border: 3px solid !default;
 @import "ember-power-select";
+@import "ember-basic-dropdown";

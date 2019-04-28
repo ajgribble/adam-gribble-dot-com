@@ -1,4 +1,5 @@
 <div class="bg-grey-lighter h-screen overflow-x-auto">
+  {{adm-navbar linkComponent="link-to-external" homeRoute="home" class="w-2/3 mx-auto"}}
   <div class="grid grid-rows-dashboard grid-gap-8 grid-columns grid-template-areas-dashboard p-8 w-2/3 mx-auto">
     {{#power-select
       triggerClass="adm-trigger"
@@ -6,7 +7,7 @@
       selected=symbols
       renderInPlace=true
       searchEnabled=false
-      selectedItemComponent="adm-symbol-trigger"
+      selectedItemComponent=(component "adm-symbol-trigger")
       onchange=(action (mut symbols))
       as |name|
     }}

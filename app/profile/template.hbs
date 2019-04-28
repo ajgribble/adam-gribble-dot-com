@@ -3,6 +3,11 @@
   color=bannerColor
   username=username
 }}
+{{#adm-navbar homeRoute="profile" class="absolute mx-auto w-2/3 text-orange" as |link|}}
+  {{link "Sample Stock Dashboard" "sample-dashboard.index"
+    class="no-underline text-grey-darker hover:text-orange"
+  }}
+{{/adm-navbar}}
 <div class="grid grid-columns grid-rows grid-template-areas-default h-screen">
   <div class="grid-area-main">
     {{adm-hero-banner
