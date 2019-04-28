@@ -50,10 +50,10 @@ export default Adapter.extend(AdapterFetch, {
     return new AdapterError(errors, detailedMessage);
   },
 
-  isInvalid(status/*, headers, payload*/) {
+  isInvalid(status /*, headers, payload*/) {
     return status === 422;
   },
-  isSuccess(status/*, headers, payload*/) {
+  isSuccess(status /*, headers, payload*/) {
     return (status >= 200 && status < 300) || status === 304;
-  },
+  }
 });

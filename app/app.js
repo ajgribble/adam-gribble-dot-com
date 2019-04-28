@@ -12,7 +12,7 @@ const App = Application.extend({
   engines: {
     sampleDashboard: {
       dependencies: {
-        services: [ 'store'],
+        services: ['store'],
         externalRoutes: {
           home: 'profile'
         }
