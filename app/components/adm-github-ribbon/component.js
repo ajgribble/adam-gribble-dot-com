@@ -1,5 +1,5 @@
+import { computed } from "@ember/object";
 import Component from '@ember/component';
-import { computed } from '@ember/object';
 
 const palette = {
   red: 'aa0000',
@@ -10,13 +10,14 @@ const palette = {
   white: 'ffffff'
 };
 
-export default Component.extend({
-  color: 'red',
-  orientation: 'right',
-  project: null,
-  username: '',
+export default class AdmGithubRibbonComponent extends Component {
+  color = 'red';
+  orientation = 'right';
+  project = null;
+  username = '';
 
-  link: computed('project', 'username', function() {
+  @computed('project', 'username')
+  get link() {
     let url = `https://github.com/${this.username}`;
 
     if (this.project) {
@@ -24,10 +25,12 @@ export default Component.extend({
     }
 
     return url;
-  }),
-  imageUrl: computed('color', 'orientation', function() {
+  }
+
+  @computed('color', 'orientation')
+  get imageUrl() {
     return `https://s3.amazonaws.com/github/ribbons/forkme_${
       this.orientation
     }_${this.color}_${palette[this.color]}.png`;
-  })
-});
+  }
+}
