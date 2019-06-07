@@ -12,7 +12,9 @@ import layout from './template';
   'justify-between',
   'p-6'
 )
-export default class AdmNavbarComponent extends Component {
+class AdmNavbarComponent extends Component {
   homeRoute = 'profile';
   linkComponent = 'link-to';
 }
+
+export default AdmNavbarComponent;

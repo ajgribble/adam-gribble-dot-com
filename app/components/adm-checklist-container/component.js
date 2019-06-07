@@ -3,7 +3,7 @@ import { computed } from "@ember/object";
 import Component from '@ember/component';
 
 @classNames('md:flex-1', 'p-4')
-export default class AdmChecklistContainerComponent extends Component {
+class AdmChecklistContainerComponent extends Component {
   color = 'grey';
 
   @computed('color')
@@ -18,3 +18,5 @@ export default class AdmChecklistContainerComponent extends Component {
     return `border-${this.color}`;
   }
 }
+
+export default AdmChecklistContainerComponent;

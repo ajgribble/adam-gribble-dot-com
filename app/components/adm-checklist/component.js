@@ -3,7 +3,7 @@ import { computed } from "@ember/object";
 import Component from '@ember/component';
 
 @classNames('flex', 'flex-col', 'h-full')
-export default class AdmChecklistComponent extends Component {
+class AdmChecklistComponent extends Component {
   textColor = 'white';
   title = '';
 
@@ -30,3 +30,5 @@ export default class AdmChecklistComponent extends Component {
     this.set('items', this.items || []);
   }
 }
+
+export default AdmChecklistComponent;
