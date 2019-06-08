@@ -2,7 +2,7 @@ import DS from 'ember-data';
 
 const { JSONSerializer } = DS;
 
-export default JSONSerializer.extend({
+export default class AnalyticSerializer extends JSONSerializer {
   normalizeQueryResponse(store, primaryModelClass, payload, id, requestType) {
     const newPayload = Object.keys(payload).reduce((acc, key, index) => {
       return [].concat(
@@ -13,6 +13,6 @@ export default JSONSerializer.extend({
         })
       );
     }, []);
-    return this._super(store, primaryModelClass, newPayload, id, requestType);
+    return super.normalizeQueryResponse(store, primaryModelClass, newPayload, id, requestType);
   }
-});
+}

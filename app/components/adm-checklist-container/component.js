@@ -1,16 +1,22 @@
-import { computed } from '@ember/object';
+import { className, classNames } from "@ember-decorators/component";
+import { computed } from "@ember/object";
 import Component from '@ember/component';
 
-export default Component.extend({
-  classNames: ['md:flex-1', 'p-4'],
-  classNameBindings: ['bgColor', 'borderColor'],
+@classNames('md:flex-1', 'p-4')
+class AdmChecklistContainerComponent extends Component {
+  color = 'grey';
 
-  color: 'grey',
-
-  bgColor: computed('color', function() {
+  @computed('color')
+  @className
+  get bgColor() {
     return `bg-${this.color}`;
-  }),
-  borderColor: computed('color', function() {
+  }
+
+  @computed('color')
+  @className
+  get borderColor() {
     return `border-${this.color}`;
-  })
-});
+  }
+}
+
+export default AdmChecklistContainerComponent;

@@ -1,27 +1,34 @@
+import { classNames } from "@ember-decorators/component";
+import { computed } from "@ember/object";
 import Component from '@ember/component';
-import { computed } from '@ember/object';
 
-export default Component.extend({
-  classNames: ['flex', 'flex-col', 'h-full'],
+@classNames('flex', 'flex-col', 'h-full')
+class AdmChecklistComponent extends Component {
+  textColor = 'white';
+  title = '';
 
-  textColor: 'white',
-  title: '',
-
-  contentItemClass: computed('textColor', function() {
+  @computed('textColor')
+  get contentItemClass() {
     return `p-2 font-mono font-light text-sm lg:text-xl text-${this.textColor}-lightest`;
-  }),
-  contentItemLinkClass: computed('textColor', function() {
+  }
+
+  @computed('textColor')
+  get contentItemLinkClass() {
     return `text-color-inherit no-underline hover:underline cursor-default`;
-  }),
-  headerClass: computed('textColor', function() {
+  }
+
+  @computed('textColor')
+  get headerClass() {
     return `mb-2 md:mb-4 lg:mb-8 font-mono font-thin tracking-wide uppercase sm:text-xs lg:text-lg text-${
       this.textColor
     }-lightest`;
-  }),
+  }
 
   init() {
-    this._super(...arguments);
+    super.init(...arguments);
 
     this.set('items', this.items || []);
   }
-});
+}
+
+export default AdmChecklistComponent;

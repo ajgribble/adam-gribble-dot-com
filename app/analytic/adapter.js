@@ -12,15 +12,15 @@ const {
   UnauthorizedError
 } = DS;
 
-export default Adapter.extend(AdapterFetch, {
-  host: 'https://api.iextrading.com',
-  namespace: '1.0/stock/market/batch',
+export default class AnalyticAdapter extends Adapter.extend(AdapterFetch) {
+  host = 'https://api.iextrading.com';
+  namespace = '1.0/stock/market/batch';
 
   query(store, type, query) {
     const url = `${this.host}/${this.namespace}`;
 
     return this.ajax(url, 'GET', { data: query });
-  },
+  }
 
   handleResponse(status, headers, payload, requestData) {
     if (this.isSuccess(status, headers, payload)) {
@@ -48,12 +48,13 @@ export default Adapter.extend(AdapterFetch, {
     }
 
     return new AdapterError(errors, detailedMessage);
-  },
+  }
 
   isInvalid(status /*, headers, payload*/) {
     return status === 422;
-  },
+  }
+
   isSuccess(status /*, headers, payload*/) {
     return (status >= 200 && status < 300) || status === 304;
   }
-});
+}

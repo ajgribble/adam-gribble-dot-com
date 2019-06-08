@@ -1,11 +1,11 @@
-import Controller from '@ember/controller';
+import Controller from "@ember/controller";
 import ENV from 'adam-gribble-dot-com/config/environment';
 
 const { githubBannerColor, githubUsername, profileEmail, profileName, profileSkills, tagline } = ENV;
 
-export default Controller.extend({
+export default class ProfileController extends Controller {
   init() {
-    this._super();
+    super.init();
 
     this.setProperties({
       bannerColor: githubBannerColor,
@@ -16,4 +16,4 @@ export default Controller.extend({
       username: githubUsername
     });
   }
-});
+}
