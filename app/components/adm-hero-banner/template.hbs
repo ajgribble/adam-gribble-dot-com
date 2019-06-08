@@ -7,9 +7,14 @@
   class="flex flex-col md:flex-row items-center md:items-stretch content-center justify-center mb-3"
 >
   {{#each taglineParts as |item|}}
-    <p class="text-sm lg:text-base text-blue tracking-wide mx-1">{{item}}.</p>
+    <p class="text-sm lg:text-base text-blue tracking-wide mx-1">
+      {{item}}
+      .
+    </p>
   {{/each}}
 </div>
 <div class="text-center">
-  <a href={{concat "mailto:" email}} class="adm-btn">{{email}}</a>
+  <a href={{concat "mailto:" email}} class="adm-btn">
+    {{email}}
+  </a>
 </div>
